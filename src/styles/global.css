@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0f1419;
+  --text-primary: #e8e8e8;
+  --accent-blue: #4a9eff;
+  --accent-purple: #b68cd9;
+  --accent-teal: #5fbfa7;
+  --accent-copper: #d4915e;
+  --accent-lavender: #9d7fb8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Crimson Pro', 'Times New Roman', serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1.5rem 2rem !important;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 4rem 2rem !important;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
